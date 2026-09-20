@@ -41,7 +41,9 @@ public class TripletsWithSmallerSum_countTriplets {
 }
 
 /*
-Given an array arr[] of distinct integers and an integer sum, count the number of unique triplets of elements whose sum is strictly less than sum. A triplet is identified only by the three elements it contains, so different permutations of the same three elements are counted as one triplet.
+Given an array arr[] of distinct integers and an integer sum, count the number of unique triplets of elements
+whose sum is strictly less than sum. A triplet is identified only by the three elements it contains, so different
+permutations of the same three elements are counted as one triplet.
 
 Examples :
 
