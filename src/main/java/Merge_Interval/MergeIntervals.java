@@ -30,7 +30,6 @@ public class MergeIntervals {
                 end1 = end2;
             }
         }
-
         // add last merged interval
         result.add(new int[]{start1, end1});
 
