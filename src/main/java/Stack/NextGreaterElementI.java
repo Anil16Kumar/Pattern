@@ -6,7 +6,9 @@ public class NextGreaterElementI {
     public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
 
         Stack<Integer> stk=new Stack<>();
-        List<Integer> answerList=new ArrayList<>();
+        int[] answerList=new int[nums1.length];
+        Map<Integer, Integer> mp=new HashMap<>();
+
         for(int i = nums2.length-1;i>=0;i--){
             int element=nums2[i];
             while(!stk.isEmpty() && stk.peek()<=element) {
@@ -14,14 +16,17 @@ public class NextGreaterElementI {
             }
 
             if(stk.isEmpty())
-                answerList.add(-1);
+                mp.put(element, -1);//answerList.add(-1);
             else
-                answerList.add(stk.peek());
+                mp.put(element, stk.peek());//answerList.add(stk.peek());
             stk.add(element);
         }
-        Collections.reverse(answerList);
-        System.out.println(answerList);
-        return null;
+//        Collections.reverse(answerList);
+        for(int i=0;i<nums1.length;i++){
+            answerList[i]=mp.get(nums1[i]);
+        }
+//        System.out.println(mp);
+        return answerList;
 
     }
     public static void main(String[] args) {
