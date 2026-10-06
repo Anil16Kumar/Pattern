@@ -16,7 +16,8 @@ public class SubarraysWithSumInRange {
                 left++;
             }
             count += (right - left + 1);
-            // every subarray that ends at right and starts anywhere between left and right is valid.
+            // every subarray that ends at right and starts anywhere between
+            // left and right is valid.
         }
         return count;
     }
