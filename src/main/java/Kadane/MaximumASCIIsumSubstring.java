@@ -74,3 +74,29 @@ public class MaximumASCIIsumSubstring {
         System.out.println(maxSum(str, a, b));
     }
 }
+
+/*
+Given a string s, a character array a[], and an integer array b[], find the substring of s having
+the maximum sum of ASCII values of its characters.
+
+For some characters, their standard ASCII values are redefined. For each index i, the character a[i] has
+a redefined ASCII value b[i]. For all other characters, use their standard ASCII values.
+
+Examples:
+
+Input: s = "abcde", a[] = ['c'], b[] = [-1000]
+Output: "de"
+Explanation: Substring "de" has the maximum sum of ASCII value, including c decreases the sum value
+Input: s = "dbfbsdbf", a[] = ['b','s'], b[] = [-100, 45]
+Output: "dbfbsdbf"
+Explanation: Substring "dbfbsdbf" has the maximum sum of ASCII value.
+Constraints:
+
+1 ≤ s.size() ≤ 105
+1 ≤ |a| ≤ 52
+1 ≤ |a[i]| ≤ 1
+-1000 ≤ b[i] ≤ 1000
+s consists only of English alphabets
+b.size() = a.size()
+
+* */

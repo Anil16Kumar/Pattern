@@ -11,16 +11,19 @@ public class LinkedList {
     }
 
     public Node head=null;
+    int size=0;
 
     public void addData(int data){
         if(head==null){
             head=new Node(data);
+            size = 1;
             return;
         }
         Node temp=head;
         while(temp.next!=null)
             temp=temp.next;
         temp.next=new Node(data);
+        size += 1;
     }
 
     public void seeAll(){
@@ -32,5 +35,9 @@ public class LinkedList {
             temp=temp.next;
         }
         System.out.println();
+    }
+
+    public int linkedListSize(){
+        return size;
     }
 }
