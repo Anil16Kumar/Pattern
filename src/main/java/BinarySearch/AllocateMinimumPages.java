@@ -20,7 +20,6 @@ public class AllocateMinimumPages {
                     }
                 }
             }
-
             return true;
         }
 
@@ -34,8 +33,14 @@ public class AllocateMinimumPages {
                 sum += pages;
             }
 
-            int low = max;
-            int high = sum;
+            int low = max;// maximum value hi low me kyu?? books[] ke andar ka maximum value se kaam value loge,
+            // to maximum value kisi bhi student ko allocate hi nahi hoga, but question says
+            // saari books student me allocate honi chahiye
+
+            int high = sum; // kisi bhi bache ko maximum kitna books de sakte hai? ek hi student saari book de do
+            // (possible answer, but aaisa karne se baki ke baacho ko kuchh bhi nahi milega)
+            //so, the highest possible value will be the sum of all values inside the books[].
+
             int ans = -1;
 
             while (low <= high) {
@@ -85,7 +90,7 @@ Explanation: Since there are more students than total books, it's impossible to 
 each student.
 Constraints:
 
-1 ≤ arr.size() ≤ 106
-1 ≤ arr[i], k ≤ 104
+1 ≤ arr.size() ≤ 10^6
+1 ≤ arr[i], k ≤ 10^4
 
 * */
